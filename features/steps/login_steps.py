@@ -33,3 +33,5 @@ def step_impl(context):
 def step_impl(context):
     confirmation = Login(context.driver)
     confirmation.created_successfully()
+    time.sleep(10)
+

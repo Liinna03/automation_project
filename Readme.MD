@@ -13,3 +13,6 @@ El proyecto maneja un entorno virtual con pipenv, para instalarlo y poder ejecut
 * pipenv install 
 ####Activar o ingresar al entorno virtual 
 * pipenv shell
+
+###Para ejecutar un feature del proyecto:
+* behave -i nombre_feature.feature

@@ -1,3 +1,5 @@
+import time
+
 from selenium.common.exceptions import NoSuchElementException
 
 from pages.base import BasePage
@@ -20,10 +22,12 @@ class Login(BasePage):
         element.click()
 
     def created_successfully(self):
+        return True if self.driver.find_element(*LoginPageLocator.logo_home_page) else False
+""""
         try:
             element = self.driver.find_element(*LoginPageLocator.logo_home_page)
             return True
         except NoSuchElementException as e:
             return False
-        Waitone = WaitTime(self.driver)
-        waitone.time_test(*LoginPageLocator.logo_home_page1)
+        time.sleep(10)
+"""

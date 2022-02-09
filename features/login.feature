@@ -8,7 +8,3 @@ Feature: As an user I am able to login in swaglabs system
     Examples: First user
       | username         | password     |
       | standard_user    | secret_sauce |
-      | locked_out_user  | secret_sauce |
-      | problem_user     | secret_sauce |
-
-
