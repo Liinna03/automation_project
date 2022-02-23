@@ -1,9 +1,6 @@
-import time
-
-from selenium.common.exceptions import NoSuchElementException
-
 from pages.base import BasePage
 from pages.locators.locators import LoginPageLocator
+from wrappers.time.is_present import is_element_present
 
 
 class Login(BasePage):
@@ -21,13 +18,5 @@ class Login(BasePage):
         element = self.driver.find_element(*LoginPageLocator.btn_login)
         element.click()
 
-    def created_successfully(self):
-        return True if self.driver.find_element(*LoginPageLocator.logo_home_page) else False
-""""
-        try:
-            element = self.driver.find_element(*LoginPageLocator.logo_home_page)
-            return True
-        except NoSuchElementException as e:
-            return False
-        time.sleep(10)
-"""
+    def login_successfully(self):
+        return is_element_present(self.driver, *LoginPageLocator.logo_home_page)

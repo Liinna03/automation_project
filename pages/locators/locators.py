@@ -6,8 +6,6 @@ class LoginPageLocator(object):
     txt_password_field = (By.ID, 'password')
     btn_login = (By.ID, 'login-button')
     logo_home_page = (By.CSS_SELECTOR, '#header_container > div.primary_header > div.header_label > div')
-    logo_home_page1 = "//div[@class='login_logo']"
-    ###header_container > div.primary_header > div.header_label > div
 
 
 class ProductsPageLocator(object):

@@ -1,6 +1,3 @@
-import time
-
-
 from behave import *
 from pages.cart.cart_page import ShoppingCartPage
 from pages.checkout_information.checkout_information_page import CheckoutInformationPage
@@ -11,7 +8,6 @@ from pages.checkout_overview_page.checkout_overview_page import CheckOverviewPag
 def step_impl(context):
     click_checkout_btn = ShoppingCartPage(context.driver)
     click_checkout_btn.click_checkout()
-    time.sleep(5)
 
 
 @When('user completes checkout information with her {first_name}, {last_name} and {postal_code}')

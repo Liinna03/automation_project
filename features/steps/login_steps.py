@@ -18,7 +18,7 @@ def step_impl(context, username, password):
 @given(u'user enters his username and password in the login_page')
 def step_impl(context):
     login_page = Login(context.driver)
-    time.sleep(3)
+    is_element_present(context.driver, *LoginPageLocator.txt_username_field)
     login_page.enter_username(data["username"])
     login_page.enter_password(data["password"])
 
@@ -32,6 +32,5 @@ def step_impl(context):
 @Then('the homepage of the online store is displayed')
 def step_impl(context):
     confirmation = Login(context.driver)
-    confirmation.created_successfully()
-    time.sleep(10)
+    assert confirmation.login_successfully()
 
