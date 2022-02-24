@@ -12,9 +12,9 @@ def before_scenario(context, scenario, ):
     options.add_argument("--disable-extensions")
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
-    # context.driver = webdriver.Chrome(ChromeDriverManager().install())
-    context.driver = webdriver.Chrome(executable_path=r"C:\Users\amay801549\.wdm\drivers\chromedriver\win32\98.0.4758"
-                                                      r".102\chromedriver.exe")
+    context.driver = webdriver.Chrome(ChromeDriverManager().install())
+    #context.driver = webdriver.Chrome(executable_path=r"C:\Users\amay801549\.wdm\drivers\chromedriver\win32\98.0.4758"
+                                                   #   r".102\chromedriver.exe")
     context.driver.maximize_window()
     context.driver.get("https://www.saucedemo.com/")
 
