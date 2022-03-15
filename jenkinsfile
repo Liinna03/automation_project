@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+    stage('Clonar repositorio') {
+      steps {
+        git credentialsId: 'username_password', url: 'https://github.com/Liinna03/automation_project'
+      }
+    }
+    stage('Instalar e ingresar al ambiente') {
+      steps {
+        bat 'pip install pipenv'
+        bat 'pipenv install'
+        bat 'pipenv shell'
+      }
+    }
+    stage('Ejecutar las pruebas automatizadas.') {
+      steps {
+        bat 'behave -i features'
+      }
+    }
+  }
+}          
