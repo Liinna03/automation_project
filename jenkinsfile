@@ -1,7 +1,6 @@
 properties([pipelineTriggers([githubPush()])])
 pipeline {
   agent any
-  git url: 'https://github.com/Liinna03/Online_shop.git',branch: 'master'
   stages {
     stage('Clonar repositorio') {
       steps {
