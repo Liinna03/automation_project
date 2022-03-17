@@ -1,7 +1,7 @@
 # Automatización interfaz de usuario en la pagina saucedemo
 
 ### Librerias utilizadas
-* [Python]..
+* [Python]...
 * [Selenium webdriver]
 * [Behave]
 * [Web driver manager]
